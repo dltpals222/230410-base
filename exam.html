@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>div-1</div>
+      <div>div-2</div>
+      <div>div-3</div>
+    </div>
+    <script>
+      const astric = document.body.getElementsByTagName("*");
+      console.log(astric);
+      console.dir(astric);
+
+      for (let i = 0; i < astric.length; i++) {
+        astric[i].style.boxSizing = "borderBox";
+        astric[i].style.margin = "0";
+        astric[i].style.padding = "0";
+        astric[i].style.border = "1px solid black";
+        astric[i].style.width = "100px";
+        astric[i].style.height = "100px";
+      }
+    </script>
+  </body>
+</html>
