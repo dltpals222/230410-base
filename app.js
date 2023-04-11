@@ -25,7 +25,15 @@ class Server {
 
         if (urlPathName === "/" && urlMethod === "GET") {
           serverGetRes(res, "index.html", 200, "text/html");
-        } //serverStart의 첫 if문 끝
+        } else if (urlPathName === "/style.css") {
+          serverGetRes(res, "style.css", 200, "text/css");
+        } else if (urlPathName === "/index.js") {
+          serverGetRes(res, "index.js", 200, "text/javascript");
+        } else if (urlPathName === "/tagMakeCall.js") {
+          serverGetRes(res, "tagMakeCall.js", 200, "text/javascript");
+        } else if (urlPathName === "/tagMakeFor.js") {
+          serverGetRes(res, "tagMakeFor.js", 200, "text/javascript");
+        }
       })
       .listen(this._port, (err) => {
         if (err) {
