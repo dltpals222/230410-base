@@ -70,3 +70,7 @@ for (let i = 0; i < calendarHeadDateFunc.length; i++) {
     );
   }
 }
+
+// calendarHead.children[1].innerText = new Date().getMonth();
+
+export default { root, calendarHead, calendarDate };
